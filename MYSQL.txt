@@ -16,4 +16,9 @@ to insert data into a table
 to view the data of the table
 6)select * from student;
 -----------------------------------------------------
+CREATE TABLE EMPLOYEE (EMPNO INT,NAME VARCHAR(30),DESIGNATION VARCHAR(30));
 
+INSERT INTO EMPLOYEE VALUES(3,'BIJAY','PUNE');
+
+SELECT * FROM EMPLOYEE;
+------------------------------------------------------------------------------------
