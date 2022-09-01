@@ -162,5 +162,18 @@ public static void main(String[] args)throws Exception
 }
 }
 --------------------------------------------------------------------------------
-
-
+DBMS 
+1)The data is stored as file.
+2)data is stored in hierarchical form.
+3)Normalization is not present.
+4)No security of data
+5)we don't have any relationship.
+------------------------------------------------------------------------------------
+RDBMS
+1)data is stored in a tabular form.
+2)in this data is stored in the form of tables.It has identifier called primary key.
+3)we have normalization.
+4)It follows ACID properties.
+(Atomocity,consistency,isolation,durability)
+5)we have relationship between two tables having primary key and foreign key)
+-----------------------------------------------------------------------------------------------
