@@ -177,3 +177,6 @@ RDBMS
 (Atomocity,consistency,isolation,durability)
 5)we have relationship between two tables having primary key and foreign key)
 -----------------------------------------------------------------------------------------------
+bank ---accno((accno-1,2,3)primary key---cannot enter duplicate data,it cannot be empty),name,balnce
+transaction ----accno((1,2,3,1,2,3)forign key relate to bank table),withdraw,deposite
+-----------------------------------------------------------------------------------------------------------------
