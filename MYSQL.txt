@@ -38,6 +38,10 @@ UPDATE BANK SET ADDRESS='HYDRABAD' WHERE ACCNO=1;
 8)to delete the data
 delete from bank where accno=1;
 -------------------------------------------------------------
+JDBC:- java database connectivity
+--------------------------------------------------------------------------------------------------------------------------
+Java Program(byte code)<--------------->Driver(interpreter)<--------------->MYSql(ASCII code)
+--------------------------------------------------------------------------------------------------------------------------
 example-1
 ------------------
 import java.sql.*;
@@ -45,9 +49,13 @@ public class Prg1
 {
 public static void main(String[] args)throws Exception 
 {
+	//load the driver	
 	Class.forName("com.mysql.jdbc.Driver");
+	//connection URL
 	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/allstates","root","1234");
+	//statement
 	Statement st=con.createStatement();
+	//querry
 	st.execute("insert into bank(name,address) values('geeta','hydrabad')");
 	System.out.println("row inserted");
 }
@@ -88,6 +96,71 @@ public static void main(String[] args)throws Exception
 }
 }
 --------------------------------------------------------------------------
-
+example-4
+-------------------
+import java.sql.*;
+import java.util.*;
+public class Prg1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno,name,designation");
+	int empno=ob.nextInt();
+	String name=ob.next();
+	String design=ob.next();
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/allstates","root","1234");
+	PreparedStatement st=con.prepareStatement("insert into employee values(?,?,?)");
+	st.setInt(1, empno);
+	st.setString(2, name);
+	st.setString(3, design);
+	st.execute();
+	System.out.println("row inserted");
+}
+}
+--------------------------------------------------------------------------------------------
+example-5
+----------------------
+import java.sql.*;
+import java.util.*;
+public class Prg1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter designation and empno");
+	String design=ob.next();
+	int empno=ob.nextInt();
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/allstates","root","1234");
+	PreparedStatement st=con.prepareStatement("update employee set designation=? where empno=?");
+	st.setString(1, design);
+	st.setInt(2, empno);
+	st.execute();
+	System.out.println("row updated");
+}
+}
+---------------------------------------------------------------------
+example-6
+-------------------
+import java.sql.*;
+import java.util.*;
+public class Prg1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno you want to delete");
+	int empno=ob.nextInt();
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/allstates","root","1234");
+	PreparedStatement st=con.prepareStatement("delete from employee where empno=?");
+	st.setInt(1, empno);
+	st.execute();
+	System.out.println("row deleted");
+}
+}
+--------------------------------------------------------------------------------
 
 
