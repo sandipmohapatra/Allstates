@@ -32,6 +32,12 @@ INSERT INTO BANK(NAME,ADDRESS) VALUES('BIJAY','BANGALORE');
 
 SELECT * FROM BANK;
 ------------------------------------------------------------------------------------------------------------------------------
+7)to update the data
+UPDATE BANK SET ADDRESS='HYDRABAD' WHERE ACCNO=1;
+-------------------------------------------------------------------------------------
+8)to delete the data
+delete from bank where accno=1;
+-------------------------------------------------------------
 
 
 
