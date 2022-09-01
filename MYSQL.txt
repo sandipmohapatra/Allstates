@@ -22,3 +22,18 @@ INSERT INTO EMPLOYEE VALUES(3,'BIJAY','PUNE');
 
 SELECT * FROM EMPLOYEE;
 ------------------------------------------------------------------------------------
+CREATE TABLE BANK (ACCNO INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(30) NOT NULL,ADDRESS VARCHAR(30) NOT NULL,PRIMARY KEY(ACCNO));
+
+INSERT INTO BANK(NAME,ADDRESS) VALUES('SANDIP','PUNE');
+
+INSERT INTO BANK(NAME,ADDRESS) VALUES('KIRAN','PUNE');
+
+INSERT INTO BANK(NAME,ADDRESS) VALUES('BIJAY','BANGALORE');
+
+SELECT * FROM BANK;
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
