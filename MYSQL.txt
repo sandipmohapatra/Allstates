@@ -1,0 +1,19 @@
+to display all the databases;
+1)show databases;
+---------------------------------------------------------
+to create a database
+2)create database allstates;
+------------------------------------------------------------
+to go into the database
+3)use allstates;
+----------------------------------------------------
+to create table inside the database
+4)create table student(rollno int,name varchar(30),address varchar(30));
+-------------------------------------------------------------------------------------------------
+to insert data into a table
+5)insert into student values(101,'sandip','Bangalore');
+--------------------------------------------------------------------------------
+to view the data of the table
+6)select * from student;
+-----------------------------------------------------
+
